@@ -5,10 +5,10 @@ import lombok.Setter;
 
 //blueprint of a Student
 
-@Setter
-@Getter
-@NoArgsConstructor
-@AllArgsConstructor
+//@Setter
+//@Getter
+//@NoArgsConstructor
+//@AllArgsConstructor
 public class Student {
 	//properties of object (data members)
 	private int rno;
@@ -17,6 +17,27 @@ public class Student {
 	private static int totalPassed;
 	private static int totalFailed;
 	
+	
+	
+	public void setRno(int rno) {
+		this.rno = rno;
+	}
+
+	public int getRno() {
+		return this.rno;
+	}
+
+	public Student(int rno, String name, int marks) {
+		this.rno=rno;		//this.rno means rno of instance var, rno is local var, we are reading local and writing to instance)
+		this.name=name;
+		this.marks=marks;
+	}
+	
+	public void info() {
+		System.out.println("Roll No. : "+rno);
+		System.out.println("Name     : "+name);
+		System.out.println("_____________________________________");
+	}
 	
 	public static void showAvg(Student s1, Student s2) {
 		System.out.println("Avg Marks : "+(s1.marks+s2.marks)/2);
@@ -46,4 +67,6 @@ public class Student {
 		this.rno = rno;
 		this.name = name;
 	}
+
+
 }

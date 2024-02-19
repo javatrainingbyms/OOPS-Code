@@ -2,6 +2,13 @@
 public class StudentData {
 
 	public static void main(String[] args) {
+		
+		Student s1=new Student(101, "piyush", 70);
+		Student s2=new Student(102, "rakesh", 80);
+		//Student s3=new Student()
+		s1.info();
+		s2.info();
+		/*
 		Student piyush=new Student(101, "piyush", 70);
 		Student gopi=new Student(102,"gopi");
 		Student amit=new Student();
@@ -34,6 +41,8 @@ public class StudentData {
 		Student.showAvg(amit, manoj);
 		//piyush.showAvg(amit);
 		//amit.showAvg(manoj);
+		 * 
+		 */
 	}
 
 }
