@@ -5,19 +5,20 @@ import lombok.Setter;
 
 //blueprint of a Student
 
-//@Setter
-//@Getter
-//@NoArgsConstructor
-//@AllArgsConstructor
-public class Student {
+@Setter
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
+public class Student extends Person {
 	//properties of object (data members)
 	private int rno;
-	private String name;
 	private int marks;
 	private static int totalPassed;
 	private static int totalFailed;
 	
-	
+	public String toString() {
+		return super.toString()+","+rno+","+marks;
+	}
 	
 	public void setRno(int rno) {
 		this.rno = rno;
@@ -27,15 +28,10 @@ public class Student {
 		return this.rno;
 	}
 
-	public Student(int rno, String name, int marks) {
-		this.rno=rno;		//this.rno means rno of instance var, rno is local var, we are reading local and writing to instance)
-		this.name=name;
-		this.marks=marks;
-	}
 	
 	public void info() {
 		System.out.println("Roll No. : "+rno);
-		System.out.println("Name     : "+name);
+		System.out.println("Name     : "+getName());
 		System.out.println("_____________________________________");
 	}
 	
@@ -50,7 +46,7 @@ public class Student {
 	}
 	public void printInfo() {
 		System.out.println("Roll No : "+rno);
-		System.out.println("Name    : "+name);
+		System.out.println("Name    : "+getName());
 		System.out.println("Marks   : "+marks);
 		if(marks>=33) {
 			System.out.println("Candidate Passed With : "+marks);
@@ -62,11 +58,6 @@ public class Student {
 		System.out.println("_____________________________________");
 	}
 
-	public Student(int rno, String name) {
-		super();
-		this.rno = rno;
-		this.name = name;
-	}
-
+	
 
 }
