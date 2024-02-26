@@ -1,15 +1,23 @@
+import lombok.Data;
 
-
+@Data
 public class Emp {
 	private int code;
 	private String name;
 	private int salary;
+	
+	public Emp() {
+		
+	}
 	public Emp(int code, String name, int salary) {
-		super();
 		this.code = code;
 		this.name = name;
 		this.salary = salary;
 	}
 	
-	
+	public void show() {
+		System.out.println("Code : "+code);
+		System.out.println("Name : "+name);
+		System.out.println("Salary : "+salary);
+	}
 }
