@@ -1,7 +1,7 @@
 import lombok.Data;
 
 @Data
-public class Emp {
+public abstract class Emp {
 	private int code;
 	private String name;
 	private int salary;
@@ -20,4 +20,7 @@ public class Emp {
 		System.out.println("Name : "+name);
 		System.out.println("Salary : "+salary);
 	}
+	
+	public abstract void computeNetSalary();
+	
 }
